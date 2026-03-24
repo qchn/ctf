@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CTF – Children for Tolerance and Freedom</title>
+  <meta name="description" content="Kinder der Welt zeichnen für Frieden und Toleranz inmitten kriegerischer Zeiten." />
+  <style>
+    :root {
+      --bg: #f7f7f5;
+      --surface: #ffffff;
+      --text: #1f2933;
+      --muted: #667085;
+      --line: #e6e8ec;
+      --accent-red: #ee0000;
+      --accent-green: #60a500;
+      --accent-blue: #548dd4;
+      --link: #1d4ed8;
+      --max: 1040px;
+      --radius: 18px;
+      --shadow: 0 8px 30px rgba(15, 23, 42, 0.06);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Tahoma, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    a:hover,
+    a:focus-visible {
+      text-decoration: underline;
+    }
+
+    .container {
+      width: min(calc(100% - 2rem), var(--max));
+      margin: 0 auto;
+    }
+
+    .hero {
+      padding: 1rem 0 2rem;
+    }
+
+    .hero-image,
+    .image-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-image img {
+      width: 50%;
+      margin: 0 auto;
+      object-fit: cover;
+    }
+
+    .image-card img,
+    .image-card img {
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .intro {
+      text-align: center;
+      padding: 2rem 0 1rem;
+    }
+
+    .logo {
+      margin: 0;
+      font-size: clamp(3rem, 12vw, 6.5rem);
+      line-height: 1;
+      letter-spacing: 0.08em;
+      font-weight: 700;
+    }
+
+    .logo .c { color: var(--accent-red); }
+    .logo .t { color: var(--accent-green); }
+    .logo .f { color: var(--accent-blue); }
+
+    .copyright {
+      font-size: 0.8rem;
+      vertical-align: top;
+      color: var(--muted);
+    }
+
+    h1 {
+      margin: 0.75rem 0 1rem;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      line-height: 1.15;
+    }
+
+    .lead {
+      max-width: 760px;
+      margin: 0 auto 0.75rem;
+      font-size: clamp(1rem, 2.2vw, 1.2rem);
+      font-weight: 700;
+    }
+
+    .meta {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    .section {
+      padding: 1.25rem 0;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      box-shadow: var(--shadow);
+    }
+
+    h2 {
+      margin: 0 0 0.9rem;
+      font-size: clamp(1.25rem, 3vw, 1.8rem);
+      line-height: 1.2;
+    }
+
+    h3 {
+      margin: 0 0 0.7rem;
+      font-size: 1.05rem;
+    }
+
+    p {
+      margin: 0 0 1rem;
+    }
+
+    .caption,
+    .note,
+    .status {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .cities {
+      text-align: center;
+      font-weight: 700;
+      color: #6b7280;
+    }
+
+    .grid {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .grid-2 {
+      grid-template-columns: 1fr;
+    }
+
+    .list {
+      margin: 0;
+      padding-left: 1.1rem;
+    }
+
+    .list li + li {
+      margin-top: 0.45rem;
+    }
+
+    .small {
+      font-size: 0.95rem;
+    }
+
+    .footer {
+      padding: 1rem 0 2.5rem;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    @media (min-width: 760px) {
+      .hero { padding-top: 1.5rem; }
+      .intro { padding: 2.5rem 0 1.5rem; }
+      .section { padding: 1.5rem 0; }
+      .card { padding: 1.5rem; }
+      .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <div class="hero-image">
+        <img src="https://ctf.archetrans.de/index_html_341c8016.gif" alt="Titelbild des Projekts Children for Tolerance and Freedom" />
+      </div>
+
+      <div class="intro">
+        <p class="logo" aria-label="CTF">
+          <span class="c">C</span><span class="t">T</span><span class="f">F</span><span class="copyright">©</span>
+        </p>
+        <h1>Children for Tolerance and Freedom.</h1>
+        <p class="lead">Kinder der Welt zeichnen für Frieden &amp; Toleranz inmitten kriegerischer Zeiten</p>
+        <p class="meta">
+          <a href="https://www.efo-magazin.de/aktuelles/kinderblick-auf-religi%C3%B6se-r%C3%A4ume-ein-toleranzprojekt-in-friedlosen-zeiten/">Eröffnung</a>
+          am Sonntag, 21. September 2025. Und es war gut.<br />
+          17 Uhr, <a href="https://www.facebook.com/events/460585163754399">Römer</a>, Frankfurt am Main,
+          <a href="https://vimeo.com/1134673085">Video</a>
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container grid">
+        <div class="card" style="text-align:center;">
+          <h2>Eine Vision wird Wirklichkeit – Kinder der Welt für den Frieden</h2>
+          <div class="image-card">
+            <img src="https://ctf.archetrans.de/index_html_4dddb88c.gif" alt="Gruppenbild zur Ausstellungseröffnung" />
+          </div>
+          <p class="caption">Von links nach rechts: Roberto Fabian, Rolf Glaser, Rolf W. Sirsch, Petra Kunik, Susanna Faust-Kallenberg, H.R. Hiegel, Ministerin Heike Hofmann, Matthias Kaiser, Andrea Menges-Fleig</p>
+          <p class="status"><em>Diese Seite ist im Aufbau.</em></p>
+          <p class="cities">Halle – Frankfurt – Gaza – Karlsruhe – Nancy – Paris – Kiew – Nazareth – Timisoara – Venezia – Tel Aviv – Moskau – Istanbul – Jerusalem</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid grid-2">
+        <article class="card">
+          <h2>Die Vision</h2>
+          <p><strong>Anlässlich eines Vortrages von H.R. Hiegel an der renommierten Bezalel-Kunstakademie in Jerusalem im Jahr 1995</strong> trafen sich ein Jude, ein Christ und ein Moslem. Daraus reifte die Idee, dass die Zukunft der Welt in Frieden nur über die Kinder vorstellbar ist.</p>
+          <p>Kinder visualisieren dazu die Gotteshäuser der Anderen – auch zur Abfederung sozialer Verwerfungen, da mitnichten Religionen von Macht geleitet sind. Zeichen der Toleranz zu setzen: auf diesem Hintergrund wurde das Projekt 1995 geboren.</p>
+          <p>Architekt Hiegel nahm diese Idee in den von ihm gegründeten Verein archEtrans e.V. auf. Seitdem wurde sie mit großem Engagement vorangetrieben. Erste Schulen und Kinder aus Frankreich, Deutschland, Israel, Italien, Palästina, Ukraine, Gaza, Rumänien, Russland und Mosambik beteiligten sich. Dies führte zu ersten erfolgreichen Ausstellungen.</p>
+        </article>
+
+        <article class="card">
+          <h2>Unterstützer</h2>
+          <p class="small"><strong>U. a. im Buch „Provokation zur Courage“ benannt, hier exemplarisch aufgeführt:</strong></p>
+          <p class="small">Edith Aron, Prof. Hanno Müller-Brachmann, Lorenz Alfs, Ibrahim Talha Aslandur, Arab Jewish Community Jaffa, <a href="https://www.facebook.com/100000497968235/videos/2365790003811645/">Heinrich Bedford-Strohm</a>, Benjamin Behrens, Dr. Bastian Bergerhoff, Laura Borotea, Franziska Brantner, Nicolas Buchoud, Igor Cognolato, Daniel Caspary, Prof. Nicole Deitelhoff, Deutsch-Israelische Wirtschaftsvereinigung, Deutsche Botschaft in Israel, Abraham Dzialowski, Susanna Faust-Kallenberg, Elvira Güver, Alistair Hudson, Initiative 9. November 1938, Jüdische Gemeinde Frankfurt, Jüdische Gemeinde Karlsruhe, Holger Kamlah, Felix Klein, Elisabeth Klotz, Konrad-Adenauer-Stiftung, Alexander Graf Lambsdorff und weitere.</p>
+          <p class="small">Diese Liste steht exemplarisch für die Vielfalt und den internationalen Austausch, der Frankfurt und Karlsruhe mit Städten wie Paris, Kiew, Jerusalem, Tel Aviv-Yafo und Timisoara verbindet.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid grid-2">
+        <div class="card" style="text-align:center;">
+          <h2>Beispiel einer Kinderzeichnung</h2>
+          <div class="image-card">
+            <img src="https://ctf.archetrans.de/index_html_610e0bc1.gif" alt="Zeichnung von Julian aus Jerusalem" />
+          </div>
+          <p class="caption">Zeichnung von Julian, Jerusalem</p>
+        </div>
+
+        <article class="card">
+          <h2>Spenden und Spender</h2>
+          <ul class="list small">
+            <li>Bethe Stiftung</li>
+            <li>Janina Mareike Fleig</li>
+            <li>Freimaurerloge Friede und Freiheit</li>
+            <li>Freimaurerverein „Die Drei Ringe e.V.“</li>
+            <li>Markus Graff</li>
+            <li>Otwin Goll</li>
+            <li>Großloge der Alten Freien und Angenommenen Maurer von Deutschland</li>
+            <li>Rafael Herlich</li>
+            <li>Martine + Roland Klink</li>
+            <li>Lions Hilfe Karlsruhe-Baden e.V.</li>
+            <li>Kurt Müller</li>
+            <li>Frankfurter Volksbank Rhein/Main eG</li>
+            <li>B’nai B’rith Schönstadt Loge</li>
+            <li>Nassauische Sparkasse</li>
+            <li>Dr. Thomas Schalla</li>
+            <li>Andrea Menges-Fleig</li>
+            <li>Scherer Stiftung Baden-Baden</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid grid-2">
+        <article class="card">
+          <h2>Kooperations- und Projektpartner</h2>
+          <p class="small">Evangelische Kirche Frankfurt und Offenbach, Rat der Religionen, Unter einem Zelt e.V., Stadt Frankfurt, AmkA – Amt für multikulturelle Angelegenheiten der Stadt Frankfurt am Main, Verlag mens architecturae, Initiative 9. November 1938, <a href="https://www.baden-tv.com/mediathek/video/provokation-zur-courage-wie-sehen-kinder-die-welt-die-ausstellung-im-zkm/">ZKM Karlsruhe</a>.</p>
+          <p class="small">Eine Buchpublikation, „Kinder der Welt zeichnen für Frieden und Toleranz“, wird unterstützt durch das Staatsministerium Baden-Württemberg aus Landesmitteln, die der Landtag Baden-Württemberg beschlossen hat. Zu beziehen über den Buchhandel, ISBN 978-3-923222-19-3, oder direkt beim Verlag: <a href="mailto:info@mensarchitecturae.de">info@mensarchitecturae.de</a></p>
+        </article>
+
+        <div class="card" style="text-align:center;">
+          <h2>Spendenübergabe</h2>
+          <div class="image-card">
+            <img src="https://ctf.archetrans.de/index_html_222df56.gif" alt="H.R. Hiegel und Ministerin Heike Hofmann bei einer Spendenübergabe" />
+          </div>
+          <p class="caption">H.R. Hiegel, Ministerin Heike Hofmann. 01.12.2025 Übergabe der <a href="https://www.facebook.com/photo/?fbid=26391555613777678&amp;set=a.168503763176221">Spendenurkunde</a> im Römer für archEtrans e.V. durch Oberbürgermeister Mike Josef und den Vorstandsvorsitzenden der Naspa, Marcus Nähser, an H.R. Hiegel.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid grid-2">
+        <article class="card">
+          <h2>Bankverbindung</h2>
+          <p>Spenden sind nötig und werden erbeten an archEtrans e.V.,<br />
+            <strong>IBAN: DE57 6605 0101 0108 4077 01</strong>
+          </p>
+          <p>Spendenbescheinigungen werden ab 200 Euro ausgestellt. Bitte als Betreff „Provokation zur Courage, CTF“ angeben.</p>
+          <p class="note">Unterstützung z. B. durch die Bethe-Stiftung, Ministerpräsident Boris Rhein, Staatsministerium Baden-Württemberg.</p>
+          <p class="status"><em>Sachstand 08.01.2026</em></p>
+        </article>
+
+        <article class="card">
+          <h2>Projektträger und Kontakt</h2>
+          <p><strong>Impulsgeber, Idee, Organisator und Projektträger:</strong><br />© archEtrans e.V. 2025 H.R. Hiegel, Vorsitzender, Architekt und spiritus rector Campanile.</p>
+          <p><strong>Konzept und Strategie:</strong><br />Anton Goll, Kunstpromotor Karlsruhe</p>
+          <p><strong>Kontakt:</strong><br />archEtrans e.V., Postfach 110645, D-76056 Karlsruhe<br />
+            <a href="mailto:info@archetrans.de">info@archetrans.de</a><br />
+            <a href="http://www.archetrans.de/">www.archetrans.de</a><br />
+            <a href="tel:+491716456500">+49 171 6 456 500</a>
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Die Seite ist im Aufbau und wird weiter bearbeitet.</p>
+    </div>
+  </footer>
+</body>
+</html>
